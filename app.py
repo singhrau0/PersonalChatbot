@@ -36,11 +36,6 @@ def chat():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-def open_browser():
-    """Open the default browser to the app's URL after a short delay."""
-    time.sleep(1)  # Wait for server to start
-    webbrowser.open('http://localhost:5050')
-
 if __name__ == '__main__':
     # Ensure index.html exists in the templates folder
     templates_dir = os.path.join(app.root_path, 'templates')
